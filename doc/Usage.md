@@ -51,6 +51,7 @@ The specific usage details are given below.
         python SCATS.py -task count [count options] -meta <metafile> -refgene <refgene_file> -gpinfo <gpinfo_file>
 
         [count options]    type 'python SCATS.py -task count' to check two important count options.
+        
           -umi  <yes/no> collect UMI count or not
         
           -onebam  <yes/no> whether all aligned reads are merged in one BAM files
@@ -58,5 +59,8 @@ The specific usage details are given below.
         OUTPUT:
           count_*.sh    script files will be generated under directory ./tmp/count_script
 ```
-where '-umi' and '-onebam' are two important options.
-
+where '-umi' and '-onebam' are two important options:
+* '-umi yes -onebam -yes': UMI and cell barcode tag name have to been specified in the 4th and 5th columns of <strong>metafile</strong>.
+* '-umi yes -onebam -no': only UMI barcode tag name is needed.
+* '-umi no -onebam -yes': only cell barcode tag name is needed. It has to be specified in the 4th column of <strong>metafile</strong>.
+* '-umi no -onebam -no': no tag name is needed.
