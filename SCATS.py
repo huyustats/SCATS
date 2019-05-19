@@ -17,8 +17,8 @@ if (task not in taskList):
     print("\tgroup:   group alternative splicing exon\n")
     print("\tcount:   count informative reads from indexed BAM file\n")
     #print("\tabkt:   calculate technical parameters (alpha beta kappa tau)")
-    print("\tgene:    estimate mean gene expression for each single cell condition")
-    print("\tdas:    detect differential alternative splicing (DAS) for each exon group between conditions")
+    print("\tgene:    estimate mean gene expression for each single cell condition\n")
+    print("\tdas:    detect differential alternative splicing (DAS) for each exon group between conditions\n")
 
 if task == "refgene":
     validArgList = ["-task", "-ref", "-out"]
