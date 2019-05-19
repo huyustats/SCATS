@@ -9,6 +9,6 @@
 	    pysam
 	    numpy
 	    scipy
-      cython
+      	    cython
     OpenMPI
     SAMTOOLS
