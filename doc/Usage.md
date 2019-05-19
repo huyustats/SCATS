@@ -15,6 +15,15 @@ SCATS requires a reference annotation file <strong>example.refFile</strong> in f
 ,21586763,21599191,21605683,    21546624,21548335,21551933,21553719,21554534,21560154,21562420,21563337,21564737,21571596,21573856,21582631,21584083,21585332,21586885,21599404,21606183,       0       ECE1    cmpl    cmpl    0,0,1,2,2,0,0
 ,0,0,2,0,0,0,0,1,1,0,
 ```
-Reference file in this format can be download at 
+Reference file in this format can be downloaded at [UCSC](https://genome.ucsc.edu/cgi-bin/hgTables?command=start) by selecting "all fields from selected table" in output format.
 
-https://genome.ucsc.edu/cgi-bin/hgTables?command=start
+We preprocess <strong>example.refFile</strong> by using `python SCATS.py -task refgene`. An example is given below.
+```
+python SCATS.py -task refgene -ref example.refFile -out example.refgene
+```
+Next, the command for exon grouping is to run `python SCATS.py -task group`.
+```
+python SCATS.py -task group -ref example.refgene -out example.gpinfo
+```
+<strong>example.refgene</strong> and <strong>example.gpinfo</strong> are two important calibrated annotation files for following steps.
+
