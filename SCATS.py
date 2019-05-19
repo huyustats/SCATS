@@ -154,4 +154,3 @@ if task == "das":
 
     tmpDir = crtAbsPath + "/tmp/das_script"
     print("\nPlease run all scripts (das_\*.sh files) under directory: " + tmpDir + "\n")
-
