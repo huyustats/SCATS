@@ -2,7 +2,7 @@
 
 The inputs of SCATS are aligned single-cell RNA-seq data in BAM format and a reference isoform annotation file (Ensembl/Refseq).
 
-## Step 1: Group exons from reference annotation file
+## Step 1: Group exons based on reference annotation file
 SCATS requires a reference annotation file `example.refFile` in following format:
 ```
 749     NM_001397       chr1    -       21543739        21616982        21546447        21616907        19      21543739,21548239,21551742,21553651,21554423,21560050,21562342,21563238,21564626,21571481,21573713,21582439,21584017,21585185
