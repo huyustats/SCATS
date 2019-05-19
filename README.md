@@ -13,7 +13,7 @@ For optimal performance, we recommend a HPC with 20+ cores
 The input of SCATS is single-cell RNA-seq read data in BAM format together with a refrence isoform annotation file.
 
 ## Installation
-Please refer to [Installation]() for how to install SCATS.
+Please refer to [Installation](https://github.com/huyustats/SCATS/blob/master/doc/Install.md) for how to install SCATS.
 
 ## Usage
 Please refere to [Usage]() for how to use SCATS.
