@@ -3,7 +3,7 @@
 The inputs of SCATS are aligned single-cell RNA-seq data in BAM format and a reference isoform annotation file (Ensembl/Refseq).
 
 ## Step 1: Group exons from reference annotation file
-SCATS requires a reference annotation file <strong>example.refFile</strong> in following format:
+SCATS requires a reference annotation file `example.refFile` in following format:
 ```
 749     NM_001397       chr1    -       21543739        21616982        21546447        21616907        19      21543739,21548239,21551742,21553651,21554423,21560050,21562342,21563238,21564626,21571481,21573713,21582439,21584017,21585185
 ,21586763,21599191,21605683,21616562,21616856,  21546624,21548335,21551933,21553719,21554534,21560154,21562420,21563337,21564737,21571596,21573856,21582631,21584083,21585332,21586885,21599404,21605825,21616649,21616982,     0       ECE1cmpl     cmpl    0,0,1,2,2,0,0,0,0,2,0,0,0,0,1,1,0,0,0,
@@ -17,7 +17,7 @@ SCATS requires a reference annotation file <strong>example.refFile</strong> in f
 ```
 Reference file in this format can be downloaded at [UCSC](https://genome.ucsc.edu/cgi-bin/hgTables?command=start) by selecting "all fields from selected table" in output format.
 
-We preprocess <strong>example.refFile</strong> by using `python SCATS.py -task refgene`. An example is given below.
+We preprocess `example.refFile` by using `python SCATS.py -task refgene`. An example is given below.
 ```
 python SCATS.py -task refgene -ref example.refFile -out example.refgene
 ```
@@ -25,7 +25,7 @@ Next, the command for exon grouping is to run `python SCATS.py -task group`.
 ```
 python SCATS.py -task group -ref example.refgene -out example.gpinfo
 ```
-<strong>example.refgene</strong> and <strong>example.gpinfo</strong> are two important calibrated annotation files for following steps.
+`example.refgene` and `example.gpinfo` are two important calibrated annotation files for following steps.
 
 ## Step 2: Extract informative read count for each exon group from alignment file
 SCATS requires a headerless <strong>metafile</strong> in this step tell scats how and where to find the aligment BAM files to extract cell-specific informative read count. BAM files have to been indexed. Here is an example of <strong>metafile</strong>
