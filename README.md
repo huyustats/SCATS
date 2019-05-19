@@ -20,7 +20,7 @@ Please refere to [Usage](https://github.com/huyustats/SCATS/blob/master/doc/Usag
 
 ## Contact
 
-If you have any questions/issues/bugs, please post them on [GitHub](). They would also be helpful to other users. 
+If you have any questions/issues/bugs, please post them on [GitHub](https://github.com/huyustats/SCATS/issues). They would also be helpful to other users. 
 
 
 
