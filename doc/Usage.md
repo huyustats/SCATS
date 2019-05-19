@@ -60,7 +60,7 @@ The specific usage details are given below.
           count_*.sh    script files will be generated under directory ./tmp/count_script
 ```
 where '-umi' and '-onebam' are two important options:
-* '-umi yes -onebam -yes': UMI and cell barcode tag name have to been specified in the 4th and 5th columns of <strong>metafile</strong>.
-* '-umi yes -onebam -no': only UMI barcode tag name is needed.
-* '-umi no -onebam -yes': only cell barcode tag name is needed. It has to be specified in the 4th column of <strong>metafile</strong>.
+* '-umi yes -onebam -yes': UMI and cell barcode tag names have to been specified in the 4th and 5th columns of <strong>metafile</strong>.
+* '-umi yes -onebam -no': only UMI barcode tag name is needed. It has to be specified in the <strong>4th</strong> column of <strong>metafile</strong>.
+* '-umi no -onebam -yes': only cell barcode tag name is needed. It has to be specified in the <strong>4th</strong> column of <strong>metafile</strong>.
 * '-umi no -onebam -no': no tag name is needed.
