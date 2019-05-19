@@ -27,3 +27,36 @@ python SCATS.py -task group -ref example.refgene -out example.gpinfo
 ```
 <strong>example.refgene</strong> and <strong>example.gpinfo</strong> are two important calibrated annotation files for following steps.
 
+## Step 2: Extract informative read count for each exon group from alignment file
+SCATS requires a headerless <strong>metafile</strong> in this step tell scats how and where to find the aligment BAM files to extract cell-specific informative read count. BAM files have to been indexed. Here is an example of <strong>metafile</strong>
+```
+AACACGTCACATAACC-1      A       ~/1dot1/outs/possorted_genome_bam.bam  UB      CB
+GGACAAGTCTCCCTGA-1      A       ~/1dot1/outs/possorted_genome_bam.bam  UB      CB
+CACAGGCAGATCCCGC-1      B       ~/1dot1/outs/possorted_genome_bam.bam  UB      CB
+ATCTGCCGTCATCGGC-1      B       ~/1dot1/outs/possorted_genome_bam.bam  UB      CB
+GGAAAGCGTTGCTCCT-1      C       ~/1dot1/outs/possorted_genome_bam.bam  UB      CB
+CGAGCACGTGTTCTTT-1      C       ~/1dot1/outs/possorted_genome_bam.bam  UB      CB
+CCTATTACAATGGATA-1      D       ~/1dot1/outs/possorted_genome_bam.bam  UB      CB
+AAGGAGCAGCGTCAAG-1      D       ~/1dot1/outs/possorted_genome_bam.bam  UB      CB
+```
+where 1st column contains cell barcode/cell name, 2nd column represents condition group, 3rd column represents the location of BAM file. 4th and 5th columns represent the tag name of UMI barcode and cell barcode in BAM file. For example
+```
+NS500497:57:H27CKBGX2:3:12506:1885:16376        272     1       3014861 1       98M     *       0       0       TGGCGTTCCCCTGTACTGGGGCTTATAAAGTTTGCAAGTCCAATGGGCCTCTCTTTGCAGTGATGGCCGACTAGGCCATCTTTTGATACATATGCAGC      //A/A/A/EEE<A66EA/EAE//</EAEE//E/AEEAE/EEEAEE//AEEEE/AAAEEEEAEEEEE6EEEEEEEEEEEEAEE/EE6EEEEAEEAAAAA   NH:i:3  HI:i:3  AS:i:94 nM:i:1  NM:i:1  CR:Z:GAGGTGAAGTGACATA   CY:Z:AAAAAEEEEEEEEEEE   CB:Z:GAGGTGAAGTGACATA-1 UR:Z:CCATACATGA UY:Z:EEEEEEEEEE UB:Z:CCATACATGA      BC:Z:GGTTTACT   QT:Z:AAAAAEEE   RG:Z:CellRangerCount-1dot1_combined:MissingLibrary:1:H27CKBGX2:3
+```
+where UMI barcode and cell barcode tag names are indicated by "UB" and "CB" in this BAM file.
+
+The specific usage details are given below.
+```
+        USAGE:
+        python SCATS.py -task count [count options] -meta <metafile> -refgene <refgene_file> -gpinfo <gpinfo_file>
+
+        [count options]    type 'python SCATS.py -task count' to check two important count options.
+          -umi  <yes/no> collect UMI count or not
+        
+          -onebam  <yes/no> whether all aligned reads are merged in one BAM files
+
+        OUTPUT:
+          count_*.sh    script files will be generated under directory ./tmp/count_script
+```
+where '-umi' and '-onebam' are two important options.
+
