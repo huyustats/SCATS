@@ -16,7 +16,7 @@ The input of SCATS is single-cell RNA-seq read data in BAM format together with 
 Please refer to [Installation](https://github.com/huyustats/SCATS/blob/master/doc/Install.md) for how to install SCATS.
 
 ## Usage
-Please refere to [Usage]() for how to use SCATS.
+Please refere to [Usage](https://github.com/huyustats/SCATS/blob/master/doc/Usage.md) for how to use SCATS.
 
 
 
