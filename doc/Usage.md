@@ -57,10 +57,26 @@ The specific usage details are given below.
           -onebam  <yes/no> whether all aligned reads are merged in one BAM files
 
         OUTPUT:
-          count_*.sh    script files will be generated under directory ./tmp/count_script
+        
+          count_*.sh    script files will be generated under directory `./tmp/count_script`.
 ```
 where '-umi' and '-onebam' are two important options:
 * '-umi yes -onebam -yes': UMI and cell barcode tag names have to been specified in the <strong>4th</strong> and <strong>5th</strong> columns of `metafile`.
 * '-umi yes -onebam -no': only UMI barcode tag name is needed. It has to be specified in the <strong>4th</strong> column of `metafile`.
 * '-umi no -onebam -yes': only cell barcode tag name is needed. It has to be specified in the <strong>4th</strong> column of `metafile`.
 * '-umi no -onebam -no': no tag name is needed.
+Outputs of `python SCATS.py -task count` are `count_*.sh` script files located at `./tmp/count_script`. User needs to submit them to obtain informative read count for each single cell.
+
+## Step 3: Quantify gene-level expression accounting for technical noises
+In this step, SCATS requires `metafile` as input:
+```
+python SCATS.py -task gene -ncore 20 -meta metafile
+```
+Outputs of `python SCATS.py -task gene` are `gene_*.sh` script files located at `./tmp/gene_script`. User needs to submit them to obtain accurate gene expression estimations for each cell condition group.
+
+## Step 4: Detect differential alternative splicing (DAS) accounting for technical noises
+In this step, SCATS requires `metafile` and `example.gpinfo` as input:
+```
+python SCATS.py -task das -ncore 20 -meta metafile -gpinfo example.gpinfo
+```
+Outputs of `python SCATS.py -task das` are `das_*.sh` script files located at `./tmp/das_script`. User needs to submit them to obtain differential alternative splicing even at exon group level across cell conditions.
