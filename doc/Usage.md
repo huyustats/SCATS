@@ -39,7 +39,7 @@ CGAGCACGTGTTCTTT-1      C       ~/1dot1/outs/possorted_genome_bam.bam  UB      C
 CCTATTACAATGGATA-1      D       ~/1dot1/outs/possorted_genome_bam.bam  UB      CB
 AAGGAGCAGCGTCAAG-1      D       ~/1dot1/outs/possorted_genome_bam.bam  UB      CB
 ```
-where <strong>1st</strong> column contains cell <strong>barcode/cell name</strong>, <strong>2nd</strong> column represents <strong>condition group</strong>, <strong>3rd</strong> column represents the <strong>location of BAM file</strong>. <strong>4th</strong> and <strong>5th</strong> columns represent the <strong>tag name of UMI barcode and cell barcode</strong> in BAM file. For example
+where <strong>1st</strong> column contains cell <strong>barcode/cell name</strong>, <strong>2nd</strong> column represents <strong>condition group</strong>, <strong>3rd</strong> column represents the <strong>location of BAM file</strong>. <strong>4th</strong> and <strong>5th</strong> columns represent the <strong>tag names of UMI barcode and cell barcode</strong> in BAM file. For example
 ```
 NS500497:57:H27CKBGX2:3:12506:1885:16376        272     1       3014861 1       98M     *       0       0       TGGCGTTCCCCTGTACTGGGGCTTATAAAGTTTGCAAGTCCAATGGGCCTCTCTTTGCAGTGATGGCCGACTAGGCCATCTTTTGATACATATGCAGC      //A/A/A/EEE<A66EA/EAE//</EAEE//E/AEEAE/EEEAEE//AEEEE/AAAEEEEAEEEEE6EEEEEEEEEEEEAEE/EE6EEEEAEEAAAAA   NH:i:3  HI:i:3  AS:i:94 nM:i:1  NM:i:1  CR:Z:GAGGTGAAGTGACATA   CY:Z:AAAAAEEEEEEEEEEE   CB:Z:GAGGTGAAGTGACATA-1 UR:Z:CCATACATGA UY:Z:EEEEEEEEEE UB:Z:CCATACATGA      BC:Z:GGTTTACT   QT:Z:AAAAAEEE   RG:Z:CellRangerCount-1dot1_combined:MissingLibrary:1:H27CKBGX2:3
 ```
