@@ -74,7 +74,7 @@ python SCATS.py -task gene -ncore 20 -meta metafile
 ```
 Outputs of `python SCATS.py -task gene` are `gene_*.sh` script files located at `./tmp/gene_script`. User needs to submit them to obtain accurate gene expression estimations for each cell condition group.
 
-## Step 4: Detect differential alternative splicing (DAS) accounting for technical noises
+## Step 4: Detect differential alternative splicing (DAS) across cell conditions accounting for technical noises
 In this step, user needs to give  `metafile` and `example.gpinfo` to SCATS and specify the number of cores to use for each pairwise comparison between conditions:
 ```
 python SCATS.py -task das -ncore 20 -meta metafile -gpinfo example.gpinfo
