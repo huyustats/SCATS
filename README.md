@@ -18,5 +18,9 @@ Please refer to [Installation](https://github.com/huyustats/SCATS/blob/master/do
 ## Usage
 Please refere to [Usage](https://github.com/huyustats/SCATS/blob/master/doc/Usage.md) for how to use SCATS.
 
+## Contact
+
+If you have any questions/issues/bugs, please post them on [GitHub](). They would also be helpful to other users. 
+
 
 
