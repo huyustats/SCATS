@@ -13,3 +13,9 @@
     OpenMPI
     SAMTOOLS
 ```
+## Installation
+
+#### Download SCATS from github.
+```
+
+```
