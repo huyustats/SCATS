@@ -65,6 +65,7 @@ where '-umi' and '-onebam' are two important options:
 * `-umi yes -onebam -no`: only UMI barcode tag name is needed. It has to be specified in the <strong>4th</strong> column of `metafile`.
 * `-umi no -onebam -yes`: only cell barcode tag name is needed. It has to be specified in the <strong>4th</strong> column of `metafile`.
 * `-umi no -onebam -no`: no tag name is needed.
+
 Outputs of `python SCATS.py -task count` are `count_*.sh` script files located at `./tmp/count_script`. User needs to submit them to obtain informative read count for each single cell.
 
 ## Step 3: Quantify gene-level expression accounting for technical noises
