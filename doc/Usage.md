@@ -66,7 +66,7 @@ where '-umi' and '-onebam' are two important options:
 * `-umi no -onebam -yes`: only cell barcode tag name is needed. It has to be specified in the <strong>4th</strong> column of `metafile`.
 * `-umi no -onebam -no`: no tag name is needed.
 
-Outputs of `python SCATS.py -task count` are `count_*.sh` script files located at `./tmp/count_script`. User needs to submit them to obtain informative read count for each single cell.
+Outputs of `python SCATS.py -task count` are `count_*.sh` script files located at `./tmp/count_script`. User needs to run all of them to obtain informative read count for each single cell.
 
 ## Step 3: Quantify gene-level expression accounting for technical noises
 In this step, user needs to give  `metafile` to SCATS and specify the number of cores to use for each pairwise comparison between conditions:
@@ -80,4 +80,4 @@ In this step, user needs to give  `metafile` and `example.gpinfo` to SCATS and s
 ```
 python SCATS.py -task das -ncore 20 -meta metafile -gpinfo example.gpinfo
 ```
-Outputs of `python SCATS.py -task das` are `das_*.sh` script files located at `./tmp/das_script`. User needs to submit them to obtain differential alternative splicing even at exon group level across cell conditions.
+Outputs of `python SCATS.py -task das` are `das_*.sh` script files located at `./tmp/das_script`. User needs to run all of them to obtain differential alternative splicing even at exon group level across cell conditions.
