@@ -28,7 +28,7 @@ python SCATS.py -task group -ref example.refgene -out example.gpinfo
 `example.refgene` and `example.gpinfo` are two important calibrated annotation files for following steps.
 
 ## Step 2: Extract informative read count for each exon group from alignment file
-SCATS requires a headerless `metafile` in this step to tell SCATS that how and where to find the aligment BAM files to extract cell-specific informative read count. BAM files have to been indexed. Here is an example of `metafile`
+SCATS requires a headerless `metafile` in this step to tell SCATS that how and where to find the aligment BAM files to extract cell-specific informative read count. BAM files have to be indexed. Here is an example of `metafile`
 ```
 AACACGTCACATAACC-1      A       ~/1dot1/outs/possorted_genome_bam.bam  UB      CB
 GGACAAGTCTCCCTGA-1      A       ~/1dot1/outs/possorted_genome_bam.bam  UB      CB
