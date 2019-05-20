@@ -7,7 +7,7 @@ fileAbsPath = os.path.abspath(os.path.dirname(__file__))
 crtAbsPath = os.getcwd()
 
 task = ""
-taskList = ["refgene", "group", "count", "gene", "das"]
+taskList = ["refgene", "group", "count", "gene", "das", "sum"]
 for i in range(1,len(sys.argv)):
     if sys.argv[i] == "-task" and len(sys.argv)!=i+1:
         task = sys.argv[i+1]
@@ -19,6 +19,7 @@ if (task not in taskList):
     #print("\tabkt:   calculate technical parameters (alpha beta kappa tau)")
     print("\tgene:    estimate mean gene expression for each single cell condition\n")
     print("\tdas:    detect differential alternative splicing (DAS) for each exon group between conditions\n")
+    print("\tsum:    summarize DAS test results\n")
 
 if task == "refgene":
     validArgList = ["-task", "-ref", "-out"]
@@ -154,3 +155,20 @@ if task == "das":
 
     tmpDir = crtAbsPath + "/tmp/das_script"
     print("\nPlease run all scripts (das_\*.sh files) under directory: " + tmpDir + "\n")
+
+
+if task == "sum":
+    validArgList = ["-task", "-gpinfo"]
+    addAbsPath = [0, 1]
+    message = "SCATS.py -task das -gpinfo <gpinfo_file>"
+    inputs = my.parse_argument(validArgList, addAbsPath, message)
+    gpinfoFile = inputs[1]
+    tmpDir = crtAbsPath + "/tmp/summary"
+    my.mk_dir(tmpDir)
+    outFile = tmpDir + "/DAS_results"
+    tmpDir = crtAbsPath + "/tmp"
+    compareFile = crtAbsPath + "/tmp/comparegroup"
+    my.check_file(compareFile,"Please run SCATS.py -task gene.")
+    
+    myCommand = "perl " + fileAbsPath + "/bin/summarizedas.pl " + tmpDir + " " + gpinfoFile + " " + outFile
+    os.system(myCommand)
