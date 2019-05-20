@@ -12,6 +12,7 @@
 	cython
     OpenMPI
     SAMTOOLS
+    Perl
 ```
 ## Installation
 
