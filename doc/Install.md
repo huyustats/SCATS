@@ -17,5 +17,13 @@
 
 #### Download SCATS from github.
 ```
-
+git clone https://github.com/huyustats/SCATS.git
 ```
+
+#### Complie C functions using `Cython` and `gcc`
+```
+cd SCATS/bin/
+bash complie_likelihoodumi.sh
+```
+
+
