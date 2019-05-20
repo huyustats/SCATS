@@ -82,7 +82,7 @@ python SCATS.py -task das -ncore 20 -meta metafile -gpinfo example.gpinfo
 ```
 Outputs of `python SCATS.py -task das` are `das_*.sh` script files located at `./tmp/das_script`. User needs to run all of them to obtain differential alternative splicing even at exon group level across cell conditions.
 
-## Step 5: Summarize DAS testing results
+## Step 5: Summarize DAS test results
 ```
 python SCATS.py -task sum -gpinfo example.gpinfo
 ```
