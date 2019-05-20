@@ -4,7 +4,7 @@
 ```
     cmake >= 2.6.4
     gcc >= 4.4
-    Python 3.6
+    Python 2.7
     python packages:
     	pysam
 	numpy
