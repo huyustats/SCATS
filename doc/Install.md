@@ -26,4 +26,9 @@ cd SCATS/bin/
 bash complie_likelihoodumi.sh
 ```
 
+#### Check programs and python packages installed or not
+```
+python check_software.py
+```
+
 
