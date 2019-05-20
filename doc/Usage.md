@@ -1,6 +1,22 @@
 ## Instruction about how to use SCATS
 
-The inputs of SCATS are aligned single-cell RNA-seq data in BAM format and a reference isoform annotation file (Ensembl/Refseq).
+The inputs of SCATS are aligned single-cell RNA-seq data in BAM format and a reference isoform annotation file (Ensembl/Refseq).User needs to specify `-task` to perform for each step:
+```
+SCATS.py -task <task>:
+
+        refgene:   preprocess reference file
+
+        group:   group alternative splicing exon
+
+        count:   count informative reads from indexed BAM file
+
+        gene:    estimate mean gene expression for each single cell condition
+
+        das:    detect differential alternative splicing (DAS) for each exon group between conditions
+
+        sum:    summarize DAS test results
+
+```
 
 ## Step 1: Group exons based on reference annotation file
 SCATS requires a reference annotation file `example.refFile` in following format:
