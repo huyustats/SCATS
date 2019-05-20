@@ -56,4 +56,27 @@ def parse_argument(validArgList, addAbsPath, warnMessage):
         sys.exit()
     return outList
 
+# check modules
+def check_module(module):
+    x = module in sys.modules
+    if x:
+        print("Module \'" + module + "\' is installed.")
+    if not x:
+        print("Module \'" + module + "\' is NOT installed!")
+    return
 
+# check program
+from subprocess import Popen, PIPE
+
+def check_program_exists(name):
+    p = Popen(['/usr/bin/which', name], stdout=PIPE, stderr=PIPE)
+    p.communicate()
+    return p.returncode == 0
+
+def check_program(program):
+    x = check_program_exists(program)
+    if x:
+        print("Program \'" + program + "\' is installed.")
+    if not x:
+        print("Program \'" + program + "\' is NOT installed!")
+    return
