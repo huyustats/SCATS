@@ -56,9 +56,18 @@ def parse_argument(validArgList, addAbsPath, warnMessage):
         sys.exit()
     return outList
 
-# check modules
+# check modules ### NOT WORKING!!
+def check_module_exists(name):
+    try:
+        cmd = "python -c \"import " + name + "\""
+        os.system(cmd)
+        #return True
+    except ModuleNotFoundError:
+        return False
+    return True
+
 def check_module(module):
-    x = module in sys.modules
+    x = check_module_exists(module)
     if x:
         print("Module \'" + module + "\' is installed.")
     if not x:
