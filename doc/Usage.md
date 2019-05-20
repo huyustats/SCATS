@@ -1,4 +1,4 @@
-## Instruction about how to use SCATS
+# Instruction about how to use SCATS
 
 The inputs of SCATS are aligned single-cell RNA-seq data in BAM format and a reference isoform annotation file (Ensembl/Refseq). User needs to specify `-task` to perform in each step:
 ```
