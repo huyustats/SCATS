@@ -57,12 +57,11 @@ def parse_argument(validArgList, addAbsPath, warnMessage):
     return outList
 
 # check modules ### NOT WORKING!!
+import imp
 def check_module_exists(name):
     try:
-        cmd = "python -c \"import " + name + "\""
-        os.system(cmd)
-        #return True
-    except ModuleNotFoundError:
+        imp.find_module(name)
+    except ImportError:
         return False
     return True
 
