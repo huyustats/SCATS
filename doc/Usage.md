@@ -35,11 +35,11 @@ Reference file in this format can be downloaded at [UCSC](https://genome.ucsc.ed
 
 We preprocess `example.refFile` by using `python SCATS.py -task refgene`. An example is given below.
 ```
-python SCATS.py -task refgene -ref example.refFile -out example.refgene
+python SCATS.py -task refgene -refgene example.refFile -out example.refgene
 ```
 Next, the command for exon grouping is to run `python SCATS.py -task group`.
 ```
-python SCATS.py -task group -ref example.refgene -out example.gpinfo
+python SCATS.py -task group -refgene example.refgene -out example.gpinfo
 ```
 `example.refgene` and `example.gpinfo` are two important calibrated annotation files for following steps.
 
