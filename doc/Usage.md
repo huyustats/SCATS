@@ -77,10 +77,10 @@ The specific usage details are given below.
           count_*.sh    script files will be generated under directory `./tmp/count_script`.
 ```
 where '-umi' and '-onebam' are two important options:
-* `-umi yes -onebam -yes`: UMI and cell barcode tag names have to be specified in the <strong>4th</strong> and <strong>5th</strong> columns of `metafile`.
-* `-umi yes -onebam -no`: only UMI barcode tag name is needed. It has to be specified in the <strong>4th</strong> column of `metafile`.
-* `-umi no -onebam -yes`: only cell barcode tag name is needed. It has to be specified in the <strong>4th</strong> column of `metafile`.
-* `-umi no -onebam -no`: no tag name is needed.
+* `-umi yes -onebam yes`: UMI and cell barcode tag names have to be specified in the <strong>4th</strong> and <strong>5th</strong> columns of `metafile`.
+* `-umi yes -onebam no`: only UMI barcode tag name is needed. It has to be specified in the <strong>4th</strong> column of `metafile`.
+* `-umi no -onebam yes`: only cell barcode tag name is needed. It has to be specified in the <strong>4th</strong> column of `metafile`.
+* `-umi no -onebam no`: no tag name is needed.
 
 Outputs of `python SCATS.py -task count` are `count_*.sh` script files located at `./tmp/count_script`. User needs to run all of them to obtain informative read count for each single cell.
 
