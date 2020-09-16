@@ -160,7 +160,7 @@ if task == "das":
 if task == "sum":
     validArgList = ["-task", "-gpinfo"]
     addAbsPath = [0, 1]
-    message = "SCATS.py -task das -gpinfo <gpinfo_file>"
+    message = "SCATS.py -task sum -gpinfo <gpinfo_file>"
     inputs = my.parse_argument(validArgList, addAbsPath, message)
     gpinfoFile = inputs[1]
     tmpDir = crtAbsPath + "/summary"
