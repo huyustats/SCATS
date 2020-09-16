@@ -88,3 +88,10 @@ def check_program(program):
     if not x:
         print("Program \'" + program + "\' is NOT installed!")
     return
+
+# check file
+def check_file(name, othermessage):
+    check = os.path.exists(name)
+    if not check:
+        print(name+" does not exist!"+othermessage)
+        sys.exit()
