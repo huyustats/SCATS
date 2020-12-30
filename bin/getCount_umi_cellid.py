@@ -103,7 +103,8 @@ for gene in geneStructureInformation:
     geneStart = int(tmpgeneinf[3])
     geneEnd = int(tmpgeneinf[4])
     readCount = 0
-
+    if bamFilePysam.get_tid(geneChr) == -1:
+        continue
 
     ## load all reads information which were mapped to the specific gene within this loop using pysam
     for read in bamFilePysam.fetch(geneChr, geneStart, geneEnd):
