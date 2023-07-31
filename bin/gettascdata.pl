@@ -21,7 +21,7 @@ while(<FP>) {
     foreach my $i (1..$#a) {
 	$tmp{$cdt{$i}} = $tmp{$cdt{$i}} + $a[$i];
     }
-    if($tmp{1} >= 10 && $tmp{0} >= 10) {
+    if($tmp{$cdt0} >= 1 && $tmp{$cdt1} >= 1) {
 	$qgene{$a[0]} = 1;
     }
 }
